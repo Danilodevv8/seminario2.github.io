@@ -23,8 +23,8 @@ const createTable = (number, multiplicatorNumber) => {
             <div class="result">${result}</div>
         </div>`;
         const parser = new DOMParser();
-        const htmlTemplate = parser.parseFromString(template, "text/html");
-        const row = htmlTemplate.body.firstChild; // Extrair o primeiro filho do body (a div com classe "row")
+        const htmlTemplate = parser.parseFromString(template, "text/html")
+        const row = htmlTemplate.querySelector(".row") // Extrair o primeiro filho do body (a div com classe "row")
         multiplicationTable.appendChild(row);
     }
     multiplicationTitle.innerText = number;
